@@ -58,6 +58,8 @@ use std::{
 mod proptest_impls;
 #[cfg(feature = "serde1")]
 mod serde_impls;
+#[cfg(feature = "sqlx")]
+mod sqlx_impls;
 #[cfg(test)]
 mod tests;
 
