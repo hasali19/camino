@@ -9,7 +9,7 @@ use crate::{Utf8Path, Utf8PathBuf};
 
 #[cfg(feature = "sqlx-sqlite")]
 mod sqlite {
-    use sqlx_core::sqlite::{Sqlite, SqliteArgumentValue, SqliteValueRef};
+    use sqlx_sqlite::{Sqlite, SqliteArgumentValue, SqliteValueRef};
 
     use super::*;
 

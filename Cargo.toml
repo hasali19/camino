@@ -28,7 +28,8 @@ rustdoc-args = ["--cfg=doc_cfg"]
 [dependencies]
 proptest = { version = "1.0.0", optional = true }
 serde = { version = "1", features = ["derive"], optional = true }
-sqlx-core = { version = "0.6", optional = true }
+sqlx-core = { version = "0.7", optional = true }
+sqlx-sqlite = { version = "0.7", optional = true }
 
 [dev-dependencies]
 bincode = "1"
@@ -37,5 +38,5 @@ serde_bytes = "0.11.8"
 [features]
 serde1 = ["serde"]
 proptest1 = ["proptest"]
-sqlx = []
-sqlx-sqlite = ["sqlx", "sqlx-core/sqlite"]
+sqlx = ["dep:sqlx-core"]
+sqlx-sqlite = ["sqlx", "dep:sqlx-sqlite"]
